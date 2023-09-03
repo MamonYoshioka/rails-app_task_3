@@ -24,6 +24,19 @@
           <% end %>
         </tr>
       </table>
+      <h2>Add a comment</h2>
+      <%= form_with model: [@book, @book.book_comments.build] do |f| %>
+       <div>
+         <%= f.label :comment %><br>
+         <%= f.text_area :comment %>
+       </div>
+       <div>
+         <%= f.submit%>
+       </div>
+
+      <% end %>
+
+
     </div>
   </div>
 </div>
